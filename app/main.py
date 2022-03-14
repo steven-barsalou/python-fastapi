@@ -3,6 +3,10 @@
 #run "uvicorn app.main:app --reload" at terminal to run program and webserver for testing with postman
 #main is the file, app is the FastAPI application
 
+#requirements files, requirements.txt which will store the package dependancies
+#created with pip freeze > requirements.txt
+#these can be installed by running pip install -r requirements.txt
+
 # the url http://127.0.0.1:8000/docs will give you the swagger API documentation
 # the url http://127.0.0.1:8000/redoc will give you the redoc API documentation
 
