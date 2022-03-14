@@ -1,3 +1,5 @@
+#activate the virtual environment with the command below
+#C:\Users\steve\Documents\Repos\Python\fast_api\venv\Scripts\Activate.ps1
 #run "uvicorn app.main:app --reload" at terminal to run program and webserver for testing with postman
 #main is the file, app is the FastAPI application
 
@@ -20,6 +22,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 #this list of strings allows us to configure what domains can make a request of this api, you could also make it ["*""]
+#CORS
 origins = ["http://localhost", "https://www.google.com"]
 
 app.add_middleware(
@@ -36,7 +39,7 @@ app.include_router(users.router) #this includes the decorators/routes from users
 app.include_router(authenticate.router) #this includes the decorators/routes from users file
 app.include_router(vote.router) #this includes the decorators/routes from users file
 
-#root call, returns hellow worlds
+#root call, returns hellow world
 @app.get("/")
 def root():
     return {"message": "Hello World!"}

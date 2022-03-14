@@ -19,6 +19,7 @@ from .database import engine, get_db
 from sqlalchemy.orm import Session
 
 from . import models
+from .config import settings
 
 #this is the command that actually creates the tables in postgres that were defined by models.py
 #if the table already exists, it will remain, otherwise it will be created
@@ -35,7 +36,7 @@ class Post(BaseModel):
 while True:
     try:
         #normally we wouldn't code these variables in here, we would have
-        conn = psycopg2.connect(host='localhost', database='fastapi', user='postgres', password='Fuck!1234', cursor_factory=RealDictCursor)
+        conn = psycopg2.connect(host=settings.database_hostname, database=settings.database_name, user=settings.database_username, password=settings.database_password, cursor_factory=RealDictCursor)
         cursor = conn.cursor()
         print('database connection was successful!')
         break
