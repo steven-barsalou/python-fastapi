@@ -14,7 +14,7 @@ router = APIRouter(tags=['Login'])
 @router.post("/login", response_model=schemas.Token) #, response_model=List[schemas.LoginResponse]) #List creates a list of class PostResponse
 def login(user_credentials: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     
-    #OAuth2PasswordRequestForm has to attributes
+    #OAuth2PasswordRequestForm has two attributes
     #when using OAuth2PasswordRequestForm the inbound data is expected in the Body form-data
     #username
     #password

@@ -21,7 +21,7 @@ from fastapi.middleware.cors import CORSMiddleware
 #this is the command that actually creates the tables in postgres that were defined by models.py
 #if the table already exists, it will remain, otherwise it will be created
 #no longer needed now that alembic will create the tables upon calling it
-models.Base.metadata.create_all(bind=engine)
+#models.Base.metadata.create_all(bind=engine)
 
 #create an instance of FastAPI called app
 app = FastAPI()

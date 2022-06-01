@@ -15,12 +15,12 @@
 					"urlencoded": [
 						{
 							"key": "username",
-							"value": "steven.barsalou@gmail.com",
+							"value": "dave@aol.com",
 							"type": "default"
 						},
 						{
 							"key": "password",
-							"value": "saturn22",
+							"value": "rubberducky",
 							"type": "default"
 						}
 					],
@@ -54,7 +54,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"dave@aol.com\",\r\n    \"password\": \"fuckfuck\"\r\n}",
+					"raw": "{\r\n    \"email\": \"dave@aol.com\",\r\n    \"password\": \"test1234\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -85,12 +85,12 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQxMTQyNDR9.4fnbb-ApOGZXbyHgWpoYn7DSDd8PRYHfk1P7T20Hw0w",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTQxMTg1MDd9.kt2bnngcPGTURb3X67bp1qOdSc2ZNSA0FCdbsi7zirY",
 						"type": "default"
 					}
 				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/users/2",
+					"raw": "http://127.0.0.1:8000/users/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -101,7 +101,7 @@
 					"port": "8000",
 					"path": [
 						"users",
-						"2"
+						"1"
 					]
 				}
 			},
@@ -115,7 +115,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQxMTY2OTB9.I2NaAz1viJp02_Tu_IHzvWC_tgsnw7_zb5dyhy2yFuY",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTQxMTg1MDd9.kt2bnngcPGTURb3X67bp1qOdSc2ZNSA0FCdbsi7zirY",
 							"type": "string"
 						}
 					]
@@ -124,7 +124,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"second post\",\r\n  \"content\": \"this is my second post in june 2022\",\r\n  \"published\": false\r\n}",
+					"raw": "{\r\n  \"title\": \"i love hailey\",\r\n  \"content\": \"hailey is my girl, we like to camp, she is awesome\",\r\n  \"published\": true\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -176,6 +176,47 @@
 					"path": [
 						"posts",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vote On Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTQxMTg1MDd9.kt2bnngcPGTURb3X67bp1qOdSc2ZNSA0FCdbsi7zirY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 2,\r\n    \"direction\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/vote",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vote"
 					]
 				}
 			},
