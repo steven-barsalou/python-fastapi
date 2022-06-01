@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     class Config: #this will pull in the .env file settings
         env_file = ".env"
 
-settings = Settings() #get the settings by instanciation the Settings class
+settings = Settings() #get the settings by instantiation the Settings class
 #print(settings.secret_key) #print the values of one of the keys
 
 #example of how to get an environment variable
