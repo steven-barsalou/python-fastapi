@@ -14,3 +14,4 @@ app/routers/__pycache__/authenticate.cpython-310.pyc
 app/routers/__pycache__/posts.cpython-310.pyc
 app/routers/__pycache__/users.cpython-310.pyc
 app/routers/__pycache__/vote.cpython-310.pyc
+

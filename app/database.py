@@ -29,7 +29,7 @@ def get_db():
 # while True:
 #     try:
 #         #normally we wouldn't code these variables in here, we would have
-#         conn = psycopg2.connect(host='localhost', database='fastapi', user='postgres', password='Fuck!1234', cursor_factory=RealDictCursor)
+#         conn = psycopg2.connect(host='localhost', database='fastapi', user='postgres', password='F------4', cursor_factory=RealDictCursor)
 #         cursor = conn.cursor()
 #         print('database connection was successful!')
 #         break

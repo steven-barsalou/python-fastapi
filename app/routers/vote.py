@@ -14,7 +14,7 @@ router = APIRouter(prefix="/vote", tags=['Vote']) #the tags helps delineate the 
 def post_vote(vote: schemas.Vote, db: Session = Depends(get_db), current_user: int = Depends(oath2.get_current_user)): 
     
 
-    post_query = db.query(models.Vote).filter(models.Vote.post_id == vote.post_id)
+    post_query = db.query(models.Post).filter(models.Post.id == vote.post_id)
     found_post = post_query.first()
     if not found_post:
         raise HTTPException(status.HTTP_404_NOT_FOUND, detail=f"post {vote.post_id} does not exist")
