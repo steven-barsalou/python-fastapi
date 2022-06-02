@@ -29,7 +29,6 @@ app = FastAPI()
 #this list of strings allows us to configure what domains can make a request of this api
 #CORS
 #create a list of allowed domains 
-#we should not have to include "http://localhost"
 #origins = ["https://www.google.com", "https://www.cnn.com"]
 
 #this allows all origins
