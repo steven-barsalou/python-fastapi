@@ -20,19 +20,25 @@ from fastapi.middleware.cors import CORSMiddleware
 
 #this is the command that actually creates the tables in postgres that were defined by models.py
 #if the table already exists, it will remain, otherwise it will be created
-#no longer needed now that alembic will create the tables upon calling it
+#no longer needed now that alembic will create the tables upon creating revisions and running upgrades
 #models.Base.metadata.create_all(bind=engine)
 
 #create an instance of FastAPI called app
 app = FastAPI()
 
-#this list of strings allows us to configure what domains can make a request of this api, you could also make it ["*""]
+#this list of strings allows us to configure what domains can make a request of this api
 #CORS
-origins = ["http://localhost", "https://www.google.com"]
+#create a list of allowed domains 
+#we should not have to include "http://localhost"
+#origins = ["https://www.google.com", "https://www.cnn.com"]
 
+#this allows all origins
+origins = ["*"]
+
+#feed the above list into this function as a parameter
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -6,48 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "Login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "username",
-							"value": "dave@aol.com",
-							"type": "default"
-						},
-						{
-							"key": "password",
-							"value": "rubberducky",
-							"type": "default"
-						}
-					],
-					"options": {
-						"raw": {
-							"language": "text"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/login",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Create User",
 			"request": {
 				"method": "POST",
@@ -79,18 +37,64 @@
 			"response": []
 		},
 		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "dave@aol.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "test1234",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get User",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer_token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTQxMTg1MDd9.kt2bnngcPGTURb3X67bp1qOdSc2ZNSA0FCdbsi7zirY",
-						"type": "default"
-					}
-				],
+				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/users/1",
+					"raw": "http://127.0.0.1:8000/users/6",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -101,7 +105,7 @@
 					"port": "8000",
 					"path": [
 						"users",
-						"1"
+						"6"
 					]
 				}
 			},
@@ -115,7 +119,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTQxMTg1MDd9.kt2bnngcPGTURb3X67bp1qOdSc2ZNSA0FCdbsi7zirY",
+							"value": "{{bearer_token}}",
 							"type": "string"
 						}
 					]
@@ -124,7 +128,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"i love hailey\",\r\n  \"content\": \"hailey is my girl, we like to camp, she is awesome\",\r\n  \"published\": true\r\n}",
+					"raw": "{\r\n  \"title\": \"ready for the river float\",\r\n  \"content\": \"looking forward to floating the river this month\",\r\n  \"published\": true\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -156,7 +160,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQxMTY2OTB9.I2NaAz1viJp02_Tu_IHzvWC_tgsnw7_zb5dyhy2yFuY",
+							"value": "{{bearer_token}}",
 							"type": "string"
 						}
 					]
@@ -164,7 +168,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/posts/1",
+					"raw": "http://127.0.0.1:8000/posts/2",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -175,7 +179,7 @@
 					"port": "8000",
 					"path": [
 						"posts",
-						"1"
+						"2"
 					]
 				}
 			},
@@ -189,7 +193,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTQxMTg1MDd9.kt2bnngcPGTURb3X67bp1qOdSc2ZNSA0FCdbsi7zirY",
+							"value": "{{bearer_token}}",
 							"type": "string"
 						}
 					]
