@@ -1,0 +1,277 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "80f7e1bb-0aa0-4b94-b0e7-b860d5e851d9",
+			"uid": "0-80f7e1bb-0aa0-4b94-b0e7-b860d5e851d9",
+			"name": "fast_api_example_app_testing",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"19787da4-ff46-440a-b961-d8a7792aa31a",
+				"0f21bc91-a3b0-4edb-8d55-9e1a3204c0cf",
+				"d6c81a72-a624-4265-bbc2-d5bf536d9a29",
+				"5362685d-3978-4d74-9203-a25ace443d64",
+				"fc44c8b8-d432-4697-bd5d-b802e95fe04e",
+				"7348cd6b-e4bf-4466-8d00-656d9202d3db"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2022-06-01T18:52:49.267Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "0f21bc91-a3b0-4edb-8d55-9e1a3204c0cf",
+					"uid": "0-0f21bc91-a3b0-4edb-8d55-9e1a3204c0cf",
+					"name": "Login",
+					"url": "{{base_url}}/login",
+					"description": null,
+					"data": [
+						{
+							"key": "username",
+							"value": "steven.barsalou@g.com",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "saturn22",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": {
+						"raw": {
+							"language": "text"
+						}
+					},
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "80f7e1bb-0aa0-4b94-b0e7-b860d5e851d9",
+					"pathVariables": {}
+				},
+				{
+					"id": "19787da4-ff46-440a-b961-d8a7792aa31a",
+					"uid": "0-19787da4-ff46-440a-b961-d8a7792aa31a",
+					"name": "Create User",
+					"url": "{{base_url}}/users",
+					"description": null,
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "80f7e1bb-0aa0-4b94-b0e7-b860d5e851d9",
+					"rawModeData": "{\r\n    \"email\": \"steven@g.com\",\r\n    \"password\": \"saturn22\"\r\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "5362685d-3978-4d74-9203-a25ace443d64",
+					"uid": "0-5362685d-3978-4d74-9203-a25ace443d64",
+					"name": "Create Posts",
+					"url": "{{base_url}}/posts",
+					"description": null,
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{bearer_token}}"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "{{bearer_token}}"
+					},
+					"collectionId": "80f7e1bb-0aa0-4b94-b0e7-b860d5e851d9",
+					"rawModeData": "{\r\n  \"title\": \"unpublished post 2\",\r\n  \"content\": \"this is an unpublished post, i life creating at least 2 of these\",\r\n  \"published\": false\r\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "7348cd6b-e4bf-4466-8d00-656d9202d3db",
+					"uid": "0-7348cd6b-e4bf-4466-8d00-656d9202d3db",
+					"name": "Vote On Post",
+					"url": "{{base_url}}/vote",
+					"description": "",
+					"data": [],
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": "raw",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{bearer_token}}"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "{{bearer_token}}"
+					},
+					"collectionId": "80f7e1bb-0aa0-4b94-b0e7-b860d5e851d9",
+					"rawModeData": "{\r\n    \"post_id\": 5,\r\n    \"direction\": 1\r\n}",
+					"pathVariables": {}
+				},
+				{
+					"id": "d6c81a72-a624-4265-bbc2-d5bf536d9a29",
+					"uid": "0-d6c81a72-a624-4265-bbc2-d5bf536d9a29",
+					"name": "Get User",
+					"url": "{{base_url}}/users/1",
+					"description": null,
+					"data": null,
+					"dataOptions": {
+						"raw": {
+							"language": "json"
+						}
+					},
+					"dataMode": null,
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{bearer_token}}"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "{{bearer_token}}"
+					},
+					"collectionId": "80f7e1bb-0aa0-4b94-b0e7-b860d5e851d9",
+					"headers": "",
+					"pathVariables": {}
+				},
+				{
+					"id": "fc44c8b8-d432-4697-bd5d-b802e95fe04e",
+					"uid": "0-fc44c8b8-d432-4697-bd5d-b802e95fe04e",
+					"name": "Get Posts",
+					"url": "{{base_url}}/posts/5",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{bearer_token}}"
+							}
+						]
+					},
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": "bearerAuth",
+					"helperAttributes": {
+						"id": "bearer",
+						"token": "{{bearer_token}}"
+					},
+					"collectionId": "80f7e1bb-0aa0-4b94-b0e7-b860d5e851d9",
+					"pathVariables": {}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "2026c7f2-d467-4a15-b173-833fd1929e7f",
+			"name": "Local Dev",
+			"values": [
+				{
+					"key": "base_url",
+					"value": "localhost:8000",
+					"type": "default",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "4cb2c041-780f-4ff2-9afe-264fc8971148",
+			"name": "My Workspace - globals",
+			"values": [
+				{
+					"key": "bearer_token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTQxMzEyODZ9.3-qR9qwCKcj0BSbdsXpzK06lrjb1y7gZK9LW2UO7N9Q",
+					"type": "secret",
+					"enabled": true
+				},
+				{
+					"key": "base_url",
+					"value": "http://127.0.0.1:8000",
+					"type": "default",
+					"enabled": true
+				}
+			]
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
