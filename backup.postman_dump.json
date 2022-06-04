@@ -15,7 +15,8 @@
 				"d6c81a72-a624-4265-bbc2-d5bf536d9a29",
 				"5362685d-3978-4d74-9203-a25ace443d64",
 				"fc44c8b8-d432-4697-bd5d-b802e95fe04e",
-				"7348cd6b-e4bf-4466-8d00-656d9202d3db"
+				"7348cd6b-e4bf-4466-8d00-656d9202d3db",
+				"b6c4bd38-2203-4dc2-83a7-1f6ca122cfc2"
 			],
 			"folders_order": [],
 			"protocolProfileBehavior": {},
@@ -167,6 +168,28 @@
 					"pathVariables": {}
 				},
 				{
+					"id": "b6c4bd38-2203-4dc2-83a7-1f6ca122cfc2",
+					"uid": "0-b6c4bd38-2203-4dc2-83a7-1f6ca122cfc2",
+					"name": "Get Root",
+					"url": "{{base_url}}",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "80f7e1bb-0aa0-4b94-b0e7-b860d5e851d9",
+					"pathVariables": {}
+				},
+				{
 					"id": "d6c81a72-a624-4265-bbc2-d5bf536d9a29",
 					"uid": "0-d6c81a72-a624-4265-bbc2-d5bf536d9a29",
 					"name": "Get User",
@@ -254,7 +277,7 @@
 			]
 		},
 		{
-			"id": "4cb2c041-780f-4ff2-9afe-264fc8971148",
+			"id": "daac339f-17b7-41cc-8d27-7ea27e921dc8",
 			"name": "My Workspace - globals",
 			"values": [
 				{
