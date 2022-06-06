@@ -1,3 +1,11 @@
+#to manage the database, use the alembic commands
+#alembic upgrade heads to get to the latest configuration
+#alembic revision -m "revision name" to create a revision file that you manually up with
+#upgrade and downgrade code changes
+#or alembic revision --autogenerate -m "autogen revision" to have alembic compare the configuration to what is in the 
+#database to build out the change code automatically; recommend that the user review the code generated
+#before implementation
+
 from logging.config import fileConfig
 
 from sqlalchemy import engine_from_config
