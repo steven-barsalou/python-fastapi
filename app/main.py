@@ -52,4 +52,4 @@ app.include_router(vote.router) #this includes the decorators/routes from users 
 #root call, returns hellow world
 @app.get("/")
 def root():
-    return {"message": "Hello World!"}
+    return {"message": "Hello Earth!"}
